@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function LatestUpdateCard() {
+function LatestUpdateCard({data}) {
     return ( 
         <div className=" latest_update collection_box_medium ">
               <Link to="#!">

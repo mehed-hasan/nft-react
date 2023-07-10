@@ -1,14 +1,18 @@
 import { Link } from "react-router-dom";
 
-function ExploreCard() {
+function ExploreCard({data}) {
     return ( 
         <div className="nft_card -50 shadow">
       
                   <div className="nft_image theme-text-color">
-                    <Link to="pages/explore.html"><img className="img-fluid thumb" src="assets/images/banner/auction_3.png" alt="error" /></Link>
+                    <Link to="#"><img className="img-fluid thumb" src={require(`../images/banner/${data.image}`)} alt="error" /></Link>
                     <div  className="user_image_box d-flex justify-content-between">
                       <div>
-                      <img src="assets/images/icons/user_pic.png" alt="Error!" />
+                      {
+                    data.bidedBy.map((item)=>
+                    <img src={`${require(`../images/icons/${item}`)}`} alt="Error!" />
+                    )
+                  }
                       <p className="ms-3"> Placed Bid</p>
                       </div>
                       <Link to="#">
@@ -19,7 +23,7 @@ function ExploreCard() {
                           </svg>
                       </Link>
                     </div>
-                    <Link to="pages/explore.html" className="product_title theme-text-color">Autumn Art Concept</Link>
+                    <Link to="#" className="product_title theme-text-color">Autumn Art Concept</Link>
                     <div className="price_box d-flex justify-content-between">
                       <p className=""><b>50. 50 ETH</b></p>
     

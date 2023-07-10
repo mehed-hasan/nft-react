@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { lootSection } from "../../data/api";
 
 function AboutNFT() {
     return ( 
@@ -12,9 +13,8 @@ function AboutNFT() {
           </div>
           <div className="col-12 col-md-6">
             <div className="about-nft-details theme-text-color">
-              <h2 className="mb-3 section_title">Create, Sell & Collect 
-                NFTs at NFTPro</h2>
-                <p>NFTs are the latest and greatest application of blockchain technology, and marketplace has become theplatform for NFT. List the collection & artworks to the blockchain network acts as the decentralized ledger that tracks the ownership.</p>
+              <h2 className="mb-3 section_title">{lootSection.lootHeading}</h2>
+                <p>{lootSection.lootSubHeading}</p>
                 <Link className="btn theme-text-color fill-theme-btn mt-5"> <span>Discover More</span> </Link>
             </div>
           </div>

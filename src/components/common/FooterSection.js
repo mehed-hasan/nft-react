@@ -77,7 +77,7 @@ function Footer() {
           <ul>
             <li> <Link to="index.html" >Home</Link></li>
             <li> <Link to="#" >About</Link></li>
-            <li> <Link to="pages/explore.html" >Explore</Link></li>
+            <li> <Link to="#" >Explore</Link></li>
             <li> <Link to="pages/our_creators.html">Creators</Link></li>
             <li> <Link to="#" >Blog</Link></li>
           </ul>

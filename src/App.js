@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Layout from './layout';
+import LiveAcution from './pages/Auction';
+import AuctionDetails from './pages/Auction/auctionDetails';
+import CreatorsPage from './pages/Creators';
 import ExplorePage from './pages/Explore';
 import Home from './pages/Home';
 
@@ -64,6 +67,20 @@ function App() {
 
 
   }
+
+  const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+    cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
+});
+
+document.addEventListener('click', e => {
+    cursor.classList.add("expand");
+    setTimeout(() => {
+        cursor.classList.remove("expand");
+    }, 500);
+});
+
   },[themeMode])
 
   return (
@@ -73,6 +90,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/explore" element={<ExplorePage/>} />
+          <Route path="/liveauction" element={<LiveAcution/>} />
+          <Route path="/creators" element={<CreatorsPage/>} />
+          <Route path="/details/:id" element={<AuctionDetails/>} />
         </Routes>
       </Layout>
     </BrowserRouter>

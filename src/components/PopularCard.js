@@ -1,16 +1,15 @@
 import { Link } from "react-router-dom";
 
-function PopularCard() {
+function PopularCard({data}) {
     return ( 
-        <div className=" collection_box collecton_box_small">
-                    <Link to="pages/explore.html">
-                      <div className="overlay d-flex flex-column justify-content-end  p-4 ">
-                        <h4 className="collectio_card_title">Art Collection</h4>
-                        <p className="item_info">458 Items</p>
-                      </div>
-                      <img className="img-fluid" src="assets/images/banner/collection_5.png" alt="error !" />
-                    </Link>
-                  </div>
+      <div style={{backgroundImage:`url(${require(`../images/banner/${data.image}`)})`}} className=" collection_box">
+      <Link to="#">
+        <div className="overlay d-flex flex-column justify-content-end  p-4 ">
+          <h4 className="collectio_card_title">{data.name}</h4>
+          <p className="item_info">{data.itemNumber} {data.itemNumber > 1 ? "items":'item'}</p>
+        </div>
+      </Link>
+    </div>
      );
 }
 

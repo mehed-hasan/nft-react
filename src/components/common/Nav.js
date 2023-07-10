@@ -22,17 +22,17 @@ const Nav = ({changeThemeModeFunction}) => {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav m-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="index.html">Home</Link>
+                  <Link className="nav-link " aria-current="page" to="/">Home</Link>
                 </li>
 
                 <li className="nav-item">
-                  <Link className="nav-link " aria-current="page" to="pages/explore.html">Explore</Link>
+                  <Link className="nav-link " aria-current="page" to="/explore">Explore</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link " aria-current="page" to="pages/our_creators.html">Creators</Link>
+                  <Link className="nav-link " aria-current="page" to="/creators">Creators</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link " aria-current="page" to="pages/live_auction.html">Live Auction</Link>
+                  <Link className="nav-link " aria-current="page" to="/liveauction">Live Auction</Link>
                 </li>
 
 
@@ -43,7 +43,7 @@ const Nav = ({changeThemeModeFunction}) => {
                 <button className="btn border-theme-btn  theme-text-color " type="submit"><span>Connect Wallet</span></button>
                 <Link className="btn ms-2" type="submit" to="pages/sign_in.html">
                   <svg width="22" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 20.5C20.4183 20.5 24 16.9183 24 12.5C24 8.08172 20.4183 4.5 16 4.5C11.5817 4.5 8 8.08172 8 12.5C8 16.9183 11.5817 20.5 16 20.5Z" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+                    <path d="M16 20.5C20.4183 20.5 24 16.9183 24 12.5C24 8.08172 20.4183 4.5 16 4.5C11.5817 4.5 8 8.08172 8 12.5C8 16.9183 11.5817 20.5 16 20.5Z" stroke="white" stroke-width="2" strokeMiterlimit="10"/>
                     <path d="M3.875 27.5001C5.10367 25.3716 6.87104 23.604 8.99944 22.375C11.1278 21.146 13.5423 20.499 16 20.499C18.4577 20.499 20.8722 21.146 23.0006 22.375C25.129 23.604 26.8963 25.3716 28.125 27.5001" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </Link>

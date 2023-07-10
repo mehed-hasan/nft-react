@@ -1,11 +1,9 @@
-function CounterCard() {
+function CounterCard({data}) {
     return ( 
-        <div className="col-6  col-lg-3   border-0">
-        <div className="counter-item  mb-4 mb-lg-0">
-          <h3>41+</h3>
-          <p>User Active</p>
-        </div>
-      </div>
+      <div className="counter-item  mb-4 mb-lg-0">
+      <h3>{data.amount}k+</h3>
+      <p>{data.type}</p>
+    </div>
      );
 }
 

@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { PopularCollection } from "../../data/api";
+import PopularCard from "../PopularCard";
 
 function PopularCollectionSection() {
     return ( 
@@ -13,84 +15,15 @@ function PopularCollectionSection() {
         </div>
   
         <div className="container">
-          <div className="row">
-            <div className="col-12 col-md-6 mb-4  mb-lg-0">
-              <div className=" collection_box collection_box_medium">
-                <Link to="pages/explore.html">
-                  <div className="overlay d-flex flex-column justify-content-end  p-4 ">
-                    <h4 className="collectio_card_title">Autumn Art Concept</h4>
-                    <p className="item_info">458 Items</p>
-                  </div>
-                  <img className="img-fluid" src={require("../../images/banner/autumn_collection.png")} alt="error !" />
-                </Link>
-                </div>
-            </div>
-            <div className="col-12 col-md-6 mb-4  mb-lg-0">
-              <div className="row">   
-                <div className="col-6 ">
-                  <div className=" collection_box collecton_box_small">
-                    <Link to="pages/explore.html">
-                      <div className="overlay d-flex flex-column justify-content-end  p-4 ">
-                        <h4 className="collectio_card_title">Art Collection</h4>
-                        <p className="item_info">458 Items</p>
-                      </div>
-                      <img className="img-fluid" src={require("../..//images/banner/collection_1.png")} alt="error !" />
-                    </Link>
-                  </div>
-                </div>
-                <div className="col-6">
-                  <div className=" collection_box collecton_box_small">
-                    <Link to="pages/explore.html">
-                      <div className="overlay d-flex flex-column justify-content-end  p-4 ">
-                        <h4 className="collectio_card_title">Art Collection</h4>
-                        <p className="item_info">458 Items</p>
-                      </div>
-                      <img className="img-fluid" src={require("../..//images/banner/collection_2.png")} alt="error !" />
-                    </Link>
-                  </div>
-                </div>
+          <div className="row ">
+            {
+              PopularCollection.map((item, index)=>
+              <div  className={`col-12 ${index % 3 === 0 ? 'col-md-6 ':'col-md-3 '} ${3 % index === 0 ? 'order-1 order-md-2 ':''}  mt-4    mb-lg-0`} >
+                <PopularCard data={item} />
               </div>
-            </div>
-          </div>
-  
-          <div className="row">
-            <div className="col-12 col-md-6 order-1 order-md-2  mb-4  mb-lg-0">
-              <div className=" collection_box collection_box_medium">
-                <Link to="pages/explore.html">
-                  <div className="overlay d-flex flex-column justify-content-end  p-4 ">
-                    <h4 className="collectio_card_title">Autumn Art Concept</h4>
-                    <p className="item_info">458 Items</p>
-                  </div>
-                  <img className="img-fluid" src={require("../../images/banner/collection_4.png")} alt="error !" />
-                </Link>
-              </div>
-            </div>
-            <div className="col-12 col-md-6 order-2 order-md-1  mb-4  mb-lg-0">
-              <div className="row">   
-                <div className="col-6">
-                  <div className=" collection_box collecton_bo    x_small">
-                    <Link to="pages/explore.html">
-                      <div className="overlay d-flex flex-column justify-content-end  p-4 ">
-                        <h4 className="collectio_card_title">Art Collection</h4>
-                        <p className="item_info">458 Items</p>
-                      </div>
-                      <img className="img-fluid" src={require("../../images/banner/collection_6.png")} alt="error !" />
-                    </Link>
-                  </div>
-                </div>
-                <div className="col-6">
-                  <div className=" collection_box collecton_box_small">
-                    <Link to="pages/explore.html">
-                      <div className="overlay d-flex flex-column justify-content-end  p-4 ">
-                        <h4 className="collectio_card_title">Art Collection</h4>
-                        <p className="item_info">458 Items</p>
-                      </div>
-                      <img className="img-fluid" src={require("../../images/banner/collection_5.png")} alt="error !" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+              )
+            }
+
           </div>
         </div>
   

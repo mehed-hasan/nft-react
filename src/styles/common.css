@@ -370,6 +370,13 @@ text-align: center;
 color: rgba(255, 255, 255, 0.8);
 }
 
+.collection_box{
+  background-repeat: no-repeat;
+  min-height: 350px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
 .collection_box, .latest_update {
   position: relative;
 }
